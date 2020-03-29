@@ -1,0 +1,53 @@
+$blue: #1890ff;
+$gray: #ddd;
+$border: 1px solid;
+$shadow3: 0 0 3px;
+$shadow20: 0 0 20px;
+
+.auto-complete {
+  position: relative;
+
+  &-input {
+    border: $border $gray;
+    border-radius: 2px;
+    width: 100%;
+    padding-left: 10px;
+    height: 30px;
+    font-size: 12px;
+    transition: 0.5s;
+    &:hover {
+      border: $border $blue;
+      transition: 0.5s;
+    }
+    &:focus {
+      border: $border $blue;
+      box-shadow: $shadow3 $blue;
+      transition: 0.5s;
+    }
+  }
+
+  &-select {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    box-shadow: $shadow20 $gray;
+    padding: 5px 0;
+    transition: 0.5s;
+    margin-top: 5px;
+    &-option {
+      width: 100%;
+      padding: 3px 10px;
+      font-size: 14px;
+      height: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: 0.5s;
+      &:hover {
+        transition: 0.5s;
+        background-color: $gray;
+        cursor: pointer;
+      }
+      
+    }
+  }
+}
