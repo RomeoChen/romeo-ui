@@ -1,0 +1,13 @@
+.eslintrc.js
+.prettierrc.js
+.gitignore
+.travis.yml
+tsconfig.json
+
+
+# dev
+public/
+src/
+
+# other
+package-lock.json
