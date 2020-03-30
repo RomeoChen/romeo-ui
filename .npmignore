@@ -3,7 +3,7 @@
 .gitignore
 .travis.yml
 tsconfig.json
-
+.github
 
 # dev
 public/

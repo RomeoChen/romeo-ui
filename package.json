@@ -2,7 +2,7 @@
   "name": "react-ui-component-with-typescript",
   "version": "0.1.1",
   "private": false,
-  "main": "index.html",
+  "main": "./src",
   "repository": {
     "type": "git",
     "url": "https://github.com/RomeoChen/romeo-ui"
@@ -59,7 +59,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "post-push": "npm publish"
+      "pre-push": "npm run build"
     }
   },
   "lint-staged": {
