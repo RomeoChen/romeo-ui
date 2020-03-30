@@ -26,7 +26,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src --fix --ext .ts,.tsx"
+    "lint": "eslint src --fix --ext .ts,.tsx",
+    "postversion": "npm publish",
+    "postpublish": "git push origin --all; git push origin --tags"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -57,14 +59,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "git add . && lint-staged"
+      "pre-commit": "lint-staged",
+      "post-push": "npm publish"
     }
   },
   "lint-staged": {
     "*.{ts,tsx}": [
       "npm run lint",
       "prettier --write",
-      "git add ."
+      "npm run test"
+      
     ]
   }
 }
