@@ -1,6 +1,6 @@
 {
   "name": "react-ui-component-with-typescript",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "main": "index.html",
   "repository": {
@@ -67,7 +67,6 @@
       "npm run lint",
       "prettier --write",
       "npm run test"
-      
     ]
   }
 }
