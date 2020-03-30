@@ -23,5 +23,8 @@ module.exports = {
     "ecmaFeatures": {
       jsx: true
     }
+  },
+  rules: {
+    '@typescript-eslint/explicit-function-return-type': ['off']
   }
 }
