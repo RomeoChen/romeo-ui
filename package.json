@@ -27,8 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src --fix --ext .ts,.tsx",
-    "postversion": "npm publish",
-    "postpublish": "git push origin --all; git push origin --tags"
+    "postversion": "npm publish"
   },
   "eslintConfig": {
     "extends": "react-app"
