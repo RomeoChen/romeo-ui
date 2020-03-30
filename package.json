@@ -2,6 +2,11 @@
   "name": "react-ui-component-with-typescript",
   "version": "0.1.0",
   "private": false,
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RomeoChen/romeo-ui"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -11,7 +16,6 @@
     "@types/react": "^16.9.25",
     "@types/react-dom": "^16.9.5",
     "antd": "^4.0.4",
-    "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.1",
@@ -21,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src --fix --ext .ts,.tsx"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,6 +41,30 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.10",
+    "node-sass": "^4.13.1",
+    "prettier": "^2.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint",
+      "prettier --write",
+      "git add ."
     ]
   }
 }
